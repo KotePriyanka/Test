@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimble.Automation.Repository", "Nimble.Automation.Repository\Nimble.Automation.Repository.csproj", "{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimble.Automation.Accelerators", "Nimble.Automation.Accelerators\Nimble.Automation.Accelerators.csproj", "{8614D90F-2AE0-4642-B845-FC03EC70EB70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nimble.Automation.FunctionalTest", "Nimble.Automation.FunctionalTest\Nimble.Automation.FunctionalTest.csproj", "{3F670746-7FE6-43E1-A4F9-6D94E11138C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repoter", "Repoter\Repoter\Repoter.csproj", "{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{EEC248D8-06C4-49AB-8E46-576718098740}"
+	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D29529EF-8150-4C48-B28C-ECAED7E280BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugBSChrome|Any CPU = DebugBSChrome|Any CPU
+		DebugBSMobile|Any CPU = DebugBSMobile|Any CPU
+		DebugLocal|Any CPU = DebugLocal|Any CPU
+		DebugLocalChrome|Any CPU = DebugLocalChrome|Any CPU
+		DebugLocalMobile|Any CPU = DebugLocalMobile|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugBSChrome|Any CPU.ActiveCfg = DebugBSChrome|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugBSChrome|Any CPU.Build.0 = DebugBSChrome|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugBSMobile|Any CPU.ActiveCfg = DebugBSMobile|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugBSMobile|Any CPU.Build.0 = DebugBSMobile|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugLocal|Any CPU.ActiveCfg = DebugLocal|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugLocal|Any CPU.Build.0 = DebugLocal|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugLocalChrome|Any CPU.ActiveCfg = DebugLocalChrome|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugLocalChrome|Any CPU.Build.0 = DebugLocalChrome|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugLocalMobile|Any CPU.ActiveCfg = DebugLocalMobile|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.DebugLocalMobile|Any CPU.Build.0 = DebugLocalMobile|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCCDC77-48B3-4DB4-A758-B5C50FAA3FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugBSChrome|Any CPU.ActiveCfg = DebugBSChrome|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugBSChrome|Any CPU.Build.0 = DebugBSChrome|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugBSMobile|Any CPU.ActiveCfg = DebugBSMobile|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugBSMobile|Any CPU.Build.0 = DebugBSMobile|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugLocal|Any CPU.ActiveCfg = DebugLocal|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugLocal|Any CPU.Build.0 = DebugLocal|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugLocalChrome|Any CPU.ActiveCfg = DebugLocalChrome|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugLocalChrome|Any CPU.Build.0 = DebugLocalChrome|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugLocalMobile|Any CPU.ActiveCfg = DebugLocalMobile|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.DebugLocalMobile|Any CPU.Build.0 = DebugLocalMobile|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8614D90F-2AE0-4642-B845-FC03EC70EB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugBSChrome|Any CPU.ActiveCfg = DebugBSChrome|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugBSChrome|Any CPU.Build.0 = DebugBSChrome|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugBSMobile|Any CPU.ActiveCfg = DebugBSMobile|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugBSMobile|Any CPU.Build.0 = DebugBSMobile|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugLocal|Any CPU.ActiveCfg = DebugLocal|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugLocal|Any CPU.Build.0 = DebugLocal|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugLocalChrome|Any CPU.ActiveCfg = DebugLocalChrome|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugLocalChrome|Any CPU.Build.0 = DebugLocalChrome|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugLocalMobile|Any CPU.ActiveCfg = DebugLocalMobile|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.DebugLocalMobile|Any CPU.Build.0 = DebugLocalMobile|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F670746-7FE6-43E1-A4F9-6D94E11138C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugBSChrome|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugBSChrome|Any CPU.Build.0 = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugBSMobile|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugBSMobile|Any CPU.Build.0 = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugLocalChrome|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugLocalChrome|Any CPU.Build.0 = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugLocalMobile|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.DebugLocalMobile|Any CPU.Build.0 = Debug|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B6DC37-D29A-4CE3-A80C-795C85DF66B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B7B0C09-47CB-4F29-BFF6-42BD0B066666}
+	EndGlobalSection
+EndGlobal

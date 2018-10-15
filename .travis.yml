@@ -1,0 +1,24 @@
+language: csharp
+solution: "Nimble.Automation.sln"
+script: # If Cofiguration Changed, Chang the folder path in after_script
+- xbuild /p:Configuration=DebugBSChrome Nimble.Automation.sln
+before_install:
+  - sudo apt-get install nunit-console
+notifications:
+  email: false
+#install: travis_wait 30 mvn install 
+env:
+ global:
+# - BS_AUTOMATE_PROJECT="$TRAVIS_REPO_SLUG"
+ - BS_AUTOMATE_BUILD="Build - $TRAVIS_BUILD_NUMBER for $TRAVIS_REPO_SLUG"
+addons:
+  browserstack:
+    username: "sunil406"
+    access_key: "v6NkgMhsa78ukX7gcLAQ"
+    matrix:
+after_script: #Change the location according to the Xbuild configuration
+  - nunit-console Nimble.Automation.FunctionalTest/bin/DebugBSChrome/Nimble.Automation.FunctionalTest.dll
+#notifications:
+ # slack: nimble:4aos0nGaIACPjvbiOSLCXJRi
+
+  

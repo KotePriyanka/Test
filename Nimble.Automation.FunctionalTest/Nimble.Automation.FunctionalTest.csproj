@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F670746-7FE6-43E1-A4F9-6D94E11138C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nimble.Automation.FunctionalTest</RootNamespace>
+    <AssemblyName>Nimble.Automation.FunctionalTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLocal\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocalChrome|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLocalChrome\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGLOCALCHROME</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugBSMobile|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugBSMobile\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGBSMOBILE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugBSChrome|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugBSChrome\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGBSCHROME</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocalMobile|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLocalMobile\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEBUGLOCALMOBILE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\Nimble.Automation.Accelerators\.bin\Release\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.0.1\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GetBuildNumber.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC009_VerifyPOLEventCosts.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC010_VerifyPOLUtilityBills.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC011_VerifyWithMultiplePOL.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC012_VerifyMoreInfoPopUp.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC013_VerifyPOLFreetext.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC014_VerifyYestoTwoSACC.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC015_VerifyNotoTwoSACC.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC016_VerifyWithTwoPrimaryInomeCatg.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC017_VerifyInconsistencyIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC018_VerifyInconsistencyIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC019_VerifyInconsistencyIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC020_VerifyInconsistencyIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC021_VerifyInconsistencyIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC022_VerifyLoansInconsistencyDecreasedIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC023_VerifyLoansInconsistencyDecreasedIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC024_VerifyLoansInconsistencyDecreasedIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC025_VerifyLoansInconsistencyDecreasedIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC026_VerifyLoansInconsistencyDecreasedIncome.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC027_ApplyLoanwithRepaymentAmountLowest.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC028_ApplyLoanwithRepaymentAmountMiddle.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC029_ApplyLoanwithRepaymentAmountHighest.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC030_ApplyLoanwithRepaymentDateLowest.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC031_ApplyLoanwithRepaymentDateMiddle.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC032_ApplyLoanwithRepaymentDateHighest.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC033_ApplyLoanNimbleCardYES.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC034_ApplyLoanNimbleCardNO.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC035_ApplyLoanwithGovernmentIncomeismorethan40.cs" />
+    <Compile Include="RegressionTest\Milestone2\TC036_ApplyLoanwithEmploymentStausUnemployed.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC037_VerifyAllIncome_Categories_SingleLoan.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC038_VerifySpikeIncome_AnnualBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC039_VerifySpikeIncome_QuaterlyBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC040_VerifySpikeIncome_MonthlyBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC041_VerifySpikeIncome_Severancepay.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC042_VerifySpikeIncome_Reimbursement.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC043_VerifySpikeIncome_Leaveloading.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC044_VerifySpikeIncome_Other.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC045_VerifyOOC_AnnualBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC046_VerifyOOC_QuaterlyBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC047_VerifyOOC_MonthlyBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC048_VerifyOOC_Severancepay.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC049_VerifyOOC_Reimbursement.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC050_VerifyOOC_Leaveloading.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC051_VerifyOOC_Other.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC052_VerifySpikeAndOOCIncome_AnnualBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC061_VerifySpike_Monthly_II_YestItWillStaySame.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC062_VerifySpike_Annual_DI_NoOldJob.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC067_VerifyReqAmt_GreaterThan_Approved.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC068_VerifyApproved_GreaterThan_Funded.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC069_VerifyReqAmt_Equals_Approved.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC070_VerifyConfirmPage_Contents.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC071_VerifyConfirmPage_ContinueWOSelection.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC079_VerifySTP_I.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC080_VerifyFraudSuspiciousExistingEmail.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC081_VerifyFraudSuspiciousInvalidBSBandPostcode.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC078_VerifyALM_DriversLicence.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC083_VerifyALM_InternationalPassport.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC082_VerifyALM_AustralianPassport.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC077_VerifyALM_Medicare.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC072_VerifyGetMoneyPage.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC073_VerifyDNQ_DSC.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC074_VerifyRetain_UnfinishedApplication.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC053_VerifySpikeAndOOCIncome_QuaterlyBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC054_VerifySpikeAndOOCIncome_MonthlyBonus.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC055_VerifySpikeAndOOCIncome_SeverancePay.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC056_VerifySpikeAndOOCIncome_Reimbursement.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC057_VerifySpikeAndOOCIncome_Leaveloading.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC058_VerifySpikeAndOOCIncome_Other.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC059_VerifySpike_Annual_OOC_Monthly.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC060_VerifySpike_Quaterly_OOC_LeaveLoading.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC063_VerifyOOC_Quaterly_II_NoOldJob.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC064_VerifyOOC_Reimbursement_DI_YestItWillStaySame.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC065_VerifySpikeAndOOC_Monthly_II_YestItWillStaySame.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC066_VerifySpike_Quaterly_OOC_LeaveLoading_II_Yes.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC075_VerifyHighIncome_LowExp.cs" />
+    <Compile Include="RegressionTest\Milestone3\TC076_VerifyLowIncome_LowIExp.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC085_VerifyLoanWith_5POL.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC086_VerifyLoanWith_GovtIncome.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC087_VerifyLoanWith7IncomeCatg_Rectegorizing.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC088_VerifyLoanWith7IncomeCatg_EditExpenses.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC089_VerifyLoanWith7IncomeCatg_EditExp_EditIncome.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC090_VerifyLoanWith7IncomeCatg_EditIncomeandExp.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC091_VerifyReypayment_Amount.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC092_VerifyRepayment_Frequency.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC093_VerifyRepayment_Frequency_Monthly.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC084_ManualAprroval.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC104_VerifySACCGraceOutside_ReSchedule.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC105_VerifyNimbleCardActivation.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC094_VeriyLastRepaymentAmount_Confirmpage.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC116_VerifyTextDisplay_ROpage.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC095_ManualApproval.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC096_VerifySACCOutsideGrace_DebitCard.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC097_VerifySACCOutsideGrace_DirectDebt.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC098_VerifySACCOutsideGrace_BPay .cs" />
+    <Compile Include="RegressionTest\Milestone4\TC099_VerifySACCOutsideGrace_EFT.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC101_VerifySACCInsideGrace_DebitCard.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC100_VerifySACCInsideGrace_DirectDebit.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC102_VerifySACCInsideGrace_BPAY.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC103_VerifySACCInsideGrace_EFT.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC108_VerifyClosingSite_BankPage.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC109_VerifyClosingSite_SetUpPage.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC118_Verify_Repayment.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC125_VerifyDynamicUpdation_SetUpPage_Max.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC126_VerifyDynamicUpdation_SetUpPage_Min.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC127_VerifyDynamicUpdation_SetUpPage_Mid.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC110_VerifyEmployment_PartTime.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC111_VerifyEmployment_Casual.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC112_VerifyEmployment_SelfEmployed.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC113_VerifyEmployment_Contractor.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC114_VerifyEmployment_Temporary.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC128_VerifyNoTransactionLastFourDays.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC106_Verify_CSVImport.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC107_VerifyTwo_BankAcc.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC115_VerifyFraud_Mobile.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC124_VerifyHasSACCNo_RePayNo_UptoDateNo.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC123_VerifyHasSACCNo_RePayNo_UptoDateYes_NimblePay_Yes.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC122_VerifyHasSACCNo_RePayNo_UptoDateYes_NimblePay_No.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC121_VerifyHasSACCYes_RePayNo_UptoDateNo.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC120_VerifyHasSACCYes_RePayNo_UptoDateYes_NimblePay_Yes.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC119_VerifyHasSACCYes_RePayNo_UptoDateYes_NimblePay_No.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC129_NoTransactionInsufficientFunds.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC130_NoTransactionOtherAccount.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC131_NoTransactionOther.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC132_VerifyGamblingDNQ.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC117_VerifyRepayment_Amount.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC133_Verify2Green3YelloFlagsDNQ.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC134_Verify4Green0YelloFlags.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC135_IncorrectPasswordatLogin.cs" />
+    <Compile Include="RegressionTest\Milestone4\TC136_Incorrectpasswordatbank .cs" />
+    <Compile Include="RegressionTest\Milestone5\TC171_Verify_SACC_Tiers.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC148_VerifySACCInsideGrace_DebitCard_CloseSite_RL.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC149_VerifySACCDebitcardIncorrectDetails.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC150_VerifySACCDebitcard_Incorrect_Details_cardNo.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC151_VerifySACCDebitcard_Incorrect_details_Date.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC137_VerifyCBANoCardOffer.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC138_YourExpenses_StatedValues_Lower.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC139_YourExpenses_StatedValue_Higher.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC140_YourExpenses_NoRent_LivingWithFamily.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC141_YourExpenses_NoRent_PaidOffMorgtage.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC142_YourExpenses_NoRent_CompanyBenefit.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC143_YourExpenses_NoRent_GovernmentHousing.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC144_YourExpenses_NoRent_SalarySacrifice.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC145_YourExpenses_NoRent_Other.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC146_VerifyApprovedAmountSACC.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC152_VerifyDSC.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC153_VerifyBank.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC154_ForgotPassword.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC155_VerifyDependents.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC156_VerifyNoPrimaryOrSecondaryIncome.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC157_VerifyTwoSecondaryIncome.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC158_VerifyDNQUserReApplywith_Success.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC159_VerifyUserwithexistingOneSAACLoan.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC160_VerifyNoPrimaryIncome.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC161_VerifyGovtIncome41_AnswerFalse.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC164_VerifyGovtIncome30_OneSAAC.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC162_VerifyGovtIncome41_AnswerTrue.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC163_VerifyGovtIncome81.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC165_VerifyGovtIncome81_TwoBankAcc.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC166_Verify_ANR1.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC167_Verify_ANR2.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC168_VerifyDebitCardPaymentwith_NO_EziDebit_transactionfee.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC169_Verify_Monthly_BankStatement.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC170_Verify_No_Bank_Transcations.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC175_VerifyDSC0cs.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC174_Verify_Yodlee_AccountTypes_Accepted.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC173_Verify_Proviso_AccountTypes_Rejected.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC172_Verify_Proviso_AccountTypes_Accepted.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC176_Verify_Cancel_Contract.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC177_Verify_Incorrect_SMS_PIN.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC178_Verify_Email_Changed_in_MemberArea.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC179_Verify_Nimble_Card_Offered_PreEligibility_ANZ.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC180_Verify_Nimble_Card_Offered_PreEligibility_ING.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC181_Verify_Nimble_Card_Offered_ING_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC182_Verify_Nimble_Card_Offered_ING_Fortnightly.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC183_Verify_Nimble_Card_Offered_ING_Monthly.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC184_Verify_Nimble_Card_Not_Offered_ANZ_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC185_Verify_Nimble_Card_Not_Offered_ANZ_Fortnightly.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC186_Verify_Nimble_Card_Not_Offered_ANZ_Monthly.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC187_Verify_Delinquents_SACC1_Score.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC188_Verify_Delinquents_SACC2_Score.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC189_Verify_Delinquents_SACC3_Score.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC190_Verify_Delinquents_MACC1_Score.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC191_Verify_Delinquents_MACC2_Score.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC192_Verify_Delinquents_MACC3_Score.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC193_Verify_Final_Approval_Loan_Continuation.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC194_Verify_Final_Approval_More_Info_Loan_Continuation.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC195_Verify_Manual_DNQed_Client.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC196_Verify_Auto_DNQed_Client.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC197_Verify_Nimble_Card_Not_Offered_For_Other_Banks.cs" />
+    <Compile Include="RegressionTest\Milestone6\TC198_Verify_Request_MAAC_Feature.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC201_Verify_Loanamt1000_Calculator_Duration.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC200_Verify_Calculator_Duration.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC199_Verify_Access_OnlineLoanCalculator.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC202_CSVImportTransDesc280.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC203_CSVImportTransDesc2000.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC204_Verify_Payment_ViaDirectDebit_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC205_Verify_Payment_ViaDirectDebit_Payout_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC206_Verify_Payment_ViaDebitCard_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC207_Verify_Payment_ViaBpay_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC208_Verify_Prefail_Reschedule_DivideOver_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC209_Verify_Prefail_Reschedule_Extend_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC210_Verify_Prefail_NL.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC211_Verify_Prefail_Twice_NoMissed_Repayment.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC212_Verify_Prefail_Twice_CurrentMissed_Repayment.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC213_Verify_Prefail_FortNightly_Reschedule_DivideOver.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC214_Verify_Prefail_Monthly_Repayment.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC215_Verify_Prefail_FortNightly_Reschedule_Extend.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC216_Verify_Prefail_Once_Reschedule_Extend.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC217_Verify_Prefail_One_Remaining_Repayment.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC218_Verify_OneManual_OnePrefail_Reschedule_Weekly.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC219_Verify_Prefail_MACC.cs" />
+    <Compile Include="RegressionTest\Milestone7\TC220_Verify_Prefail_Two_Remaining_Repayments.cs" />
+    <Compile Include="SetUp.cs" />
+    <Compile Include="SmokeTest\TC001_VerifyingPOL.cs" />
+    <Compile Include="SmokeTest\TC002_YourEmploymentStatus.cs" />
+    <Compile Include="SmokeTest\TC003_VerifyPrimaryIncomeCategories.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmokeTest\TC004_VerifyLoanSetupwithDefaultValues.cs" />
+    <Compile Include="SmokeTest\TC005_VerifyRequestedAmount.cs" />
+    <Compile Include="SmokeTest\TC008_VerifyDefaultAutoApproval.cs" />
+    <Compile Include="SmokeTest\TC006_VerifyDNQRepayAnotherSACCLoan.cs" />
+    <Compile Include="SmokeTest\TC007_VerifylastRepaymentMatchingWithRemaining.cs" />
+    <Compile Include="RegressionTest\Milestone5\TC147_Verify_JointAcc.cs" />
+    <Compile Include="TestData\TestData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestData\BankStatementCSVUpload.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\BankStatementCSVUpload2000.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\BankStatementCSVUpload280.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\GovtIncome41.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\GovtIncome81.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nimble.Automation.Accelerators\Nimble.Automation.Accelerators.csproj">
+      <Project>{8614d90f-2ae0-4642-b845-fc03ec70eb70}</Project>
+      <Name>Nimble.Automation.Accelerators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nimble.Automation.Repository\Nimble.Automation.Repository.csproj">
+      <Project>{abccdc77-48b3-4db4-a758-b5c50faa3fa8}</Project>
+      <Name>Nimble.Automation.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AutoItX3Lib">
+      <Guid>{F8937E53-D444-4E71-9275-35B64210CC3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RegressionTest\Milestone8\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.25\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.25\build\Selenium.Chrome.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.2.25\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.2.25\build\Selenium.Chrome.WebDriver.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>wmic process where name='chromedriver.exe' delete</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
